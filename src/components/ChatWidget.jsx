@@ -182,17 +182,6 @@ export default function ChatWidget() {
             }
             break
 
-             case "response.chart":
-            if (data.chart_spec) {
-              try {
-                chartSpec = typeof data.chart_spec === "string" ? JSON.parse(data.chart_spec) : data.chart_spec
-                setMessages((prev) => prev.map((msg) => (msg.id === messageId ? { ...msg, chart: chartSpec } : msg)))
-              } catch (e) {
-                console.error("[v0] Failed to parse chart spec:", e)
-              }
-            }
-            break
-
           case "response.text.delta":
             if (data.text) {
               streamingText += data.text
