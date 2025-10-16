@@ -29,7 +29,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <ClaimsTable />
+          {/* <ClaimsTable /> */}
         </motion.main>
       </div>
 
